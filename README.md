@@ -14,3 +14,7 @@ logger.basicConfig(
     ],
 )
 ```
+
+Medium Article
+https://medium.com/@thomasjay200/python-pro-logging-for-java-devs-90b18031e268
+
