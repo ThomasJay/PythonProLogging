@@ -1,10 +1,8 @@
-# PythonProLogging
+import sys
+import logging as logger
 
-Python Logging example with multiple outputs (File and stdout) with configuration for date/time, message, line number and file name
+import mymodule
 
-## logging config
-
-```
 logger.basicConfig(
     format="%(asctime)s %(levelname)s %(message)s (Line: %(lineno)d [%(filename)s])",
     level=logger.INFO,
@@ -13,4 +11,11 @@ logger.basicConfig(
         logger.StreamHandler(sys.stdout),
     ],
 )
-```
+
+
+if __name__ == "__main__":
+    logger.info("Hi There")
+
+    mymodule.do_something()
+
+    logger.critical("We're done")
